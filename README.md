@@ -11,3 +11,5 @@ a lifetime undergraduate college commencement unless I want to go to graduate sc
 -> Equipped my university graduation cap with a 32×32 LED array, an Arduino Mega 2560, external battery source, lots of male/female wires, 
 and lots of Arduino code. By doing this I was able to display interesting animations, pictures, and text on the LED grid. This 
 repository contains all of the Arduino code and header c files containing my bitmap images and some additional functions for good use.
+
+STATUS: IN PROGRESS
