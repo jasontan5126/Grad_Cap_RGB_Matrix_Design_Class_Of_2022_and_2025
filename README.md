@@ -12,4 +12,5 @@ a lifetime undergraduate college commencement unless I want to go to graduate sc
 and lots of Arduino code. By doing this I was able to display interesting animations, pictures, and text on the LED grid. This 
 repository contains all of the Arduino code and header c files containing my bitmap images and some additional functions for good use.
 
-STATUS: IN PROGRESS
+
+# STATUS: IN PROGRESS
