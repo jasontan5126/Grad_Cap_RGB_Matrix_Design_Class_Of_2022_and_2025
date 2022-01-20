@@ -1,8 +1,8 @@
 # RGB-Matrix-Stony-Brook-Commencement-Class-of-2022
 
--> A fun project that I decided to committed to doing because I haven't actually attempted towards decorated my graduation cap 
+-> A fun project that I decided to committed to doing because I haven't decorated my graduation cap 
 in any of of my previous graduation years. Plus it's a great way to supplment what I've learned throughout my undergraduate 
-career as a computer engineering and put it into use to designing a cool application just for fun and make good use
+career as a computer engineer and put it into use to designing a cool application just for fun and make good use
 of it
 
 -> Probably a good opportunity to put my project design into good use to showcase my design during my once in
@@ -12,5 +12,6 @@ a lifetime undergraduate college commencement unless I want to go to graduate sc
 and lots of Arduino code. By doing this I was able to display interesting animations, pictures, and text on the LED grid. This 
 repository contains all of the Arduino code and header c files containing my bitmap images and some additional functions for good use.
 
+# Stony Brook Commencement Date for Me: May 20, 2022
 
 # STATUS: IN PROGRESS
