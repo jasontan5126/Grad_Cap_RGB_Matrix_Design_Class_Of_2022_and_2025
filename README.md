@@ -20,6 +20,6 @@ repository contains all of the Arduino code, c code containing my bitmap images 
   * External Battery Source (USB Adapter or 5V battery)
   * Barrel Jack Adapter (5.5x2.1mm) to USB 
   
-# Stony Brook Official Commencement Date for Me: May 20, 2022
+# Stony Brook My Official Commencement Date: May 20, 2022
 
 # STATUS: IN PROGRESS
