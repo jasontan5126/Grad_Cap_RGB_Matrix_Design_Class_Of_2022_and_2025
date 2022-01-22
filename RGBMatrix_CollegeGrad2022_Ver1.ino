@@ -1921,14 +1921,6 @@ int    textX   = 14,
        textMin = sizeof(str) * -6,
        hue     = 0;
 
-static const uint16_t PROGMEM ballcolor[3] = {
-  0x0080, // Green=1
-  0x0002, // Blue=1
-  0x1000  // Red=1
-};
-
-
-
 /**
  * Configuration of the Arduino Mega 2560 and the RGB matrix
  */
@@ -1939,55 +1931,95 @@ void setup() {
     matrix->setTextSize(0);
 }
 
-void display_header()
-{
-  String  text = "HELLO";
-  String  text1 = "WORLD";
-  uint16_t text_length = text.length();
-  int xpo = (64 - text_length * 7) / 2;
-  uint16_t text_length1 = text.length();
-  int xpo1 = (64 - text_length1 * 7) / 2;
-
-  matrix->setCursor(1, 1);
-  for (int y = 0; y < 9; y++) {
-  uint8_t  r = random(0,8);
-    matrix->setTextColor(myCOLORS[r]);
-    matrix->print(text[y]);
-  }
-
-  matrix->setCursor(1, 10);
-  for (int y = 0; y < 9; y++) {
-  uint8_t  r = random(0,8);
-    matrix->setTextColor(myCOLORS[r]);
-    matrix->print(text1[y]);
-  }
-  
-  matrix->setFont();
-}
-
-void display_middle(){
-
-
-int ypos = 20;
-
-  // Draw big scrolly text on top
-matrix->setTextColor(matrix->ColorHSV(hue, 255, 255, true));
-matrix->setCursor(textX, ypos);
-matrix->print(F2(str));
-
-  // Move text left (w/wrap), increase hue
-  if((--textX) < textMin) textX = 14;
-  hue += 7;
-  if(hue >= 1536) hue -= 1536;
-
-}
-
 /**
  * Loop infinitely to display the different pixel arts for the RGB 32x32 matrix
  */
 void loop() {
-    displayMatrix(7000);
+    displayMatrix(4000);
 }
+
+/**
+ * Display "Helloo world"
+ */
+void displayHELLOWORLD()
+{
+    String  text = "HELLO";
+    String  text1 = "WORLD";
+  
+    matrix->setCursor(1, 1);
+    for (int y = 0; y < 9; y++) {
+    uint8_t  r = random(0,8);
+      matrix->setTextColor(myCOLORS[r]);
+      matrix->print(text[y]);
+    }
+  
+    matrix->setCursor(1, 10);
+    for (int y = 0; y < 9; y++) {
+    uint8_t  r = random(0,8);
+      matrix->setTextColor(myCOLORS[r]);
+      matrix->print(text1[y]);
+    }   
+}
+
+/**
+ * Print my message
+ */
+void displayMESSAGE(){
+    int ypos = 20;    
+      // Draw big scrolly text on top
+    matrix->setTextColor(matrix->ColorHSV(hue, 255, 255, true));
+    matrix->setCursor(textX, ypos);
+    matrix->print(F2(str));
+  
+    // Move text left (w/wrap), increase hue
+    if((--textX) < textMin) textX = 14;
+    hue += 7;
+    if(hue >= 1536) hue -= 1536;
+}
+
+/**
+ * Display "Helloo world"
+ */
+void displayHireMeIntel()
+{
+  int i = 0;
+  matrix->fillScreen(matrix->Color333(0, 0, 0));
+  matrix->setCursor(1, 1);
+  matrix->setTextColor(matrix->Color333(255, 255, 255));
+  matrix->print("HIRE");
+  matrix->setCursor(6, 10);
+  matrix->setTextColor(matrix->Color333(255, 255, 255));
+  matrix->print("ME");
+
+  //Display "INTEL" ONE letter at a time
+  do{
+    i++;
+    switch(i){
+      case 1:
+        matrix->drawChar(1, 18, 'I', 120, matrix->Color333(0, 0, 0), 1);
+        matrix->swapBuffers(true);
+        delay(1000);
+      case 2:
+        matrix->drawChar(6, 18, 'N', matrix->Color333(0,0,255),matrix->Color333(0, 0, 0), 1);
+        matrix->swapBuffers(true);
+        delay(1000);
+      case 3:
+        matrix->drawChar(12, 18, 'T', matrix->Color333(0,0,255),matrix->Color333(0, 0, 0), 1);
+        matrix->swapBuffers(true);
+        delay(1000);
+      case 4:
+        matrix->drawChar(18, 18, 'E', matrix->Color333(0,0,255),matrix->Color333(0, 0, 0), 1);
+        matrix->swapBuffers(true);
+        delay(1000);
+      case 5:
+        matrix->drawChar(24, 18, 'L', matrix->Color333(0,0,255),matrix->Color333(0, 0, 0), 1); 
+        matrix->swapBuffers(true);
+    } 
+  }while(i < 5);
+  delay(3000);
+}
+
+
 
 void displayMatrix(int dela){
     int i = 0;
@@ -1995,17 +2027,16 @@ void displayMatrix(int dela){
     matrix->drawRGBBitmap(0, 0, (const uint16_t *) stony_brook_logo, 32, 32);
     matrix->show();
     delay(dela);    //7 seconds delay: 7000 ms
-   // matrix->clear(); //Set image to black
 
     /**
      * To display the Hello World and Me
      */
     do{
-     matrix->fillScreen(matrix->Color333(0, 0, 0));
-     display_header();
-     display_middle();
-     matrix->show();
-     i++;
+       matrix->fillScreen(matrix->Color333(0, 0, 0));
+       displayHELLOWORLD();
+       displayMESSAGE();
+       matrix->show();
+       i++;
      }while(i < 135);
        //7 seconds delay: 7000 ms
 
@@ -2090,11 +2121,7 @@ void displayMatrix(int dela){
 //    delay(dela);    //7 seconds delay: 7000 ms
 //    matrix->clear(); //Set image to black 
 
-    //Display the AngryBirdsBMP.h
-    matrix->drawRGBBitmap(0, 0, (const uint16_t *) angry_birds, 32, 32);
-    matrix->show();
-    delay(dela);    //7 seconds delay: 7000 ms
-    matrix->clear(); //Set image to black 
+
 
     //Display the StarfyBMP.h
     matrix->drawRGBBitmap(0, 0, (const uint16_t *) starfy, 32, 32);
@@ -2105,7 +2132,12 @@ void displayMatrix(int dela){
     /*
      * Display the red ghost gif from pacman
      */
-    displayRedGhostBMP(300, 3);
+    displayRedGhostBMP(50, 3);
+
+    /*
+     * Display text "Hire me Intel"
+     */
+    displayHireMeIntel();
 }
 
 
@@ -2135,7 +2167,7 @@ void displayRedGhostBMP(int delayNum, int count){
         delay(delayNum);    //0.3 seconds delay: 300 ms
         matrix->clear(); //Set image to black   
     }
-    delay(700);  //Wait 07 seconds to go to next BMP
+    delay(60);  //Wait 07 seconds to go to next BMP
 }
 
 /**
@@ -2183,5 +2215,5 @@ void displayPikachuBMP(int delayNum, int count){
         delay(delayNum);    //0.3 seconds delay: 300 ms
         matrix->clear(); //Set image to black  
     }
-    delay(700);  //Wait .7 seconds to go to next BMP
+    delay(60);  //Wait .7 seconds to go to next BMP
 }
