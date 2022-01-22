@@ -13,12 +13,12 @@ and lots of Arduino code. By doing this I was able to display interesting animat
 repository contains all of the Arduino code, c code containing my bitmap images and some additional functions for good use.
 
 # Supplies Used/To be Used for this COOL PROJECT!!!
-  * Arduino MEGA 2560
-  * 12V DC Power Jack Adapter Connector
-  * DC 5V 4A Power Adapter (Switching Power Supply)
-  * Adafruit Medium 32x32 RGB LED matrix panel
-  * External Battery Source (USB Adapter or 5V battery)
-  * Barrel Jack Adapter (5.5x2.1mm) to USB 
+  * Arduino MEGA 2560: https://www.amazon.com/dp/B01H4ZLZLQ?psc=1&ref=ppx_yo2_dt_b_product_details
+  * 12V DC Power Jack Adapter Connector: https://www.amazon.com/dp/B015OCV5Y8?psc=1&ref=ppx_yo2_dt_b_product_details
+  * DC 5V 4A Power Adapter (Switching Power Supply): https://www.amazon.com/dp/B087LY41PV?psc=1&ref=ppx_yo2_dt_b_product_details
+  * Adafruit Medium 32x32 RGB LED matrix panel: https://www.amazon.com/dp/B00KHBJPIK?psc=1&ref=ppx_yo2_dt_b_product_details
+  * External Battery Source (USB Adapter or 5V battery): 
+  * Barrel Jack Adapter (5.5x2.1mm) to USB : 
   
 # Stony Brook My Official Commencement Date: May 20, 2022
 
