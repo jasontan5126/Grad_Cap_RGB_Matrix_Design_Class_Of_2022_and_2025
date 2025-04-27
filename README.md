@@ -1,4 +1,4 @@
-# RGB-Matrix-Stony-Brook-Commencement-Class-of-2022
+# RGB-Matrix-For-Commencements Class of 2022 and 2025 (Stony Brook and Georgia Tech)
 
 * A fun project that I decided to do just for fun because I haven't decorated my graduation cap 
 in my recent graduation years. Plus it's a great way to supplment what I've learned throughout my undergraduate 
