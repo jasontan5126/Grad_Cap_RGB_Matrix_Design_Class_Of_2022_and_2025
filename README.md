@@ -1,7 +1,7 @@
 # RGB-Matrix-For-Commencements Class of 2022 and 2025 (Stony Brook and Georgia Tech)
 
 * A fun project that I decided to do just for fun because I haven't decorated my graduation cap 
-in my recent graduation years. Plus it's a great way to supplment what I've learned throughout my undergraduate 
+in my recent graduation years. Plus it's a great way to supplement what I've learned throughout my undergraduate 
 career as a computer engineer and put it into good use by designing a cool application just for fun and make use
 of it
 
