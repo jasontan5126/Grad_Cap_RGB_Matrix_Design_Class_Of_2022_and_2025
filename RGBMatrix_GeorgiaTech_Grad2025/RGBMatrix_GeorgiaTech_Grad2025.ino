@@ -3077,7 +3077,7 @@ void displayMatrix(int dela){
     //Display the jason_and_winnie_couple.h
     matrix->drawRGBBitmap(0, 0, (const uint16_t *) jason_and_winnie_couple, 32, 32);
     matrix->show();
-    delay(30000);    //30 seconds delay: 30000 ms
+    delay(60000);    //30 seconds delay: 30000 ms
     matrix->clear(); //Set image to black 
 
   
